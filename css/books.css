@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rokkitt", serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  background-color: #eee;
+
+  /* Because we want header to be sticky later */
+  height: 96px;
+  padding: 0 48px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  height: 96px;
+  width: 250px;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(36, 123, 194);
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: rgb(2, 53, 96);
+}
+
+.author-link:visited,
+.author-link:link,
+.category-link:visited,
+.category-link:link {
+  color: #777;
+  text-decoration: none;
+}
+
+.author-link:hover,
+.author-link:active,
+.category-link:hover,
+.category-link:active {
+  color: rgb(36, 123, 194);
+}
+/*   section  design       
+***************************** 
+*/
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 24px 24px;
+  margin-bottom: 12px;
+}
+
+.head {
+  color: rgb(36, 123, 194);
+}
+
+.add-btn {
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(36, 123, 194);
+  border: 3px solid rgb(2, 53, 96);
+}
+
+.add-btn:hover {
+  background-color: rgb(2, 53, 96);
+}
+.post-container {
+  margin: 0px 96px 48px;
+  width: 1000px;
+  box-shadow: 0px 0px 5px 0px rgba(50, 56, 51, 0.564);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 48px;
+  padding: 12px;
+  color: #444;
+}
+.book-img {
+  height: 150px;
+  width: 350px;
+}
+
+.book-title {
+  display: flex;
+  margin-bottom: 12px;
+}
+.author {
+  display: flex;
+  margin-right: 24px;
+}
+
+.icon {
+  padding-right: 8px;
+}
+
+.row-content {
+  font-size: 14px;
+  display: flex;
+  flex-direction: left;
+  margin-bottom: 12px;
+}
+
+.category {
+  display: flex;
+  margin-right: 24px;
+}
+
+.date {
+  display: flex;
+}
+
+.prize-section {
+  display: flex;
+  flex-direction: left;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: rgb(36, 123, 194);
+}
+
+.old-prize {
+  text-decoration: line-through;
+  margin-right: 48px;
+}
+.prize {
+  color: rgb(2, 53, 96);
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 2px;
+  background-color: rgb(77, 77, 143);
+  color: white;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(49, 49, 107);
+  color: white;
+}
+
+.page-link-list {
+  text-align: center;
+}
+
+.page-link-list li {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.link {
+  padding: 8px;
+  font-weight: bold;
+  margin-right: 8px;
+  background-color: rgb(36, 123, 194);
+}
+
+.link:hover {
+  background-color: rgb(2, 53, 96);
+}
+.page-link:link,
+.page-link:visited {
+  text-decoration: none;
+  color: white;
+}
+
+/*   footer  design       
+***************************** 
+*/
+
+.footer {
+  background-color: #eee;
+  text-align: center;
+}
+
+.footer p {
+  color: rgb(36, 123, 194);
+  padding: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wp-link:link,
+.wp-link:visited {
+  color: rgb(36, 123, 194);
+  text-decoration: none;
+}
+
+.wp-link:hover,
+.wp-link:active {
+  color: rgb(125, 197, 255);
+}
+
+.active {
+  background-color: rgb(125, 197, 255);
+}
+
+*:focus {
+  outline: none;
+}

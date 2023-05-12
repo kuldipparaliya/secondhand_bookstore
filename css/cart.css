@@ -1,0 +1,257 @@
+/*
+header section
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rokkitt", serif;
+}
+
+.header {
+  height: 72px;
+  margin-bottom: 2px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 96px;
+  text-align: center;
+  align-items: center;
+}
+
+.logo-box {
+  grid-column: 2;
+}
+
+.web-logo {
+  height: 70px;
+}
+
+.search-box {
+  grid-column: 3;
+  /* background-color: #ccc; */
+  background-color: #eee;
+  width: 81%;
+  border-radius: 23px;
+
+  margin: 0px 48px;
+}
+
+.search {
+  padding: 10px;
+  background-color: #eee;
+  /* width: 70%; */
+  border: none;
+  font-size: 18px;
+  border-radius: 23px;
+}
+
+.btn {
+  padding: 12px;
+  background-color: rgb(77, 77, 143);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(49, 49, 107);
+}
+
+.icon {
+  font-size: 14px;
+}
+
+.horizontal {
+  border-top: 1px solid #ddd;
+}
+
+/*
+  navigation section
+  
+  */
+
+.nav {
+  height: 50px;
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  padding: 15px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.nav-li {
+  margin-right: 48px;
+  list-style: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #aaa;
+}
+
+/*
+section design
+*/
+
+.section-container {
+  padding: 24px 48px 48px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  justify-content: space-around;
+  text-align: center;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.bag-icon {
+  margin-right: 8px;
+}
+
+.book-img {
+  height: 100px;
+  width: 130px;
+  border-radius: 3px;
+}
+
+.table {
+  width: 100%;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+th {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  font-weight: 500;
+  padding: 10px;
+}
+.category-link {
+  text-decoration: none;
+}
+
+.delete-icon {
+  font-size: 24px;
+}
+
+.total {
+  font-size: 24px;
+  color: #444;
+  font-weight: bold;
+  padding: 16px;
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px;
+  background-color: #eee;
+  color: #444;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.danger {
+  border: 1px solid #eda2a2;
+  color: #fd8181;
+  margin-right: 24px;
+}
+
+.delete-icon {
+  color: #fd8181;
+  font-size: 24px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: #c43131;
+}
+.danger:hover {
+  background-color: #c43131;
+  color: white;
+}
+
+.amount {
+  /* background-color: #aaa; */
+  border: 1px solid #aaa;
+  color: #333;
+}
+
+.amount:hover {
+  background-color: #999;
+  color: #333;
+}
+
+/*
+      footer-section
+  */
+.footer {
+  background-color: #eee;
+  text-align: center;
+}
+
+.footer p {
+  color: rgb(36, 123, 194);
+  padding: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wp-link:link,
+.wp-link:visited {
+  color: rgb(36, 123, 194);
+  text-decoration: none;
+}
+
+.wp-link:hover,
+.wp-link:active {
+  color: rgb(125, 197, 255);
+}
+
+.active {
+  background-color: rgb(125, 197, 255);
+}
+
+*:focus {
+  outline: none;
+}

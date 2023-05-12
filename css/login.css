@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*   section  design       
+      ***************************** 
+*/
+
+.container {
+  margin: 96px;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.head {
+  color: rgb(36, 123, 194);
+}
+
+.form-container {
+  padding: 24px;
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+  box-shadow: 0px 0px 5px 0px rgba(50, 56, 51, 0.564);
+}
+
+label {
+  display: flex;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+input {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.save {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(36, 123, 194);
+  border: 3px solid rgb(2, 53, 96);
+}
+
+.save:hover {
+  background-color: rgb(2, 53, 96);
+}
+
+/*
+ Create amount button design
+ 
+*/
+
+.create:link,
+.create:visited {
+  font-display: flex;
+  justify-content: right;
+  color: #555;
+  text-decoration: none;
+}
+
+.create:hover,
+.create:active {
+  text-decoration: underline;
+  color: #333;
+}
+
+.error {
+  color: red;
+  font-weight: 700;
+  margin-left: 16px;
+}

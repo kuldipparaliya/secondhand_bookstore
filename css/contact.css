@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rokkitt", serif;
+}
+
+.header {
+  height: 72px;
+  margin-bottom: 2px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 96px;
+  text-align: center;
+  align-items: center;
+}
+
+/*
+    cart-icon setting
+  */
+.cart-box {
+  position: relative;
+}
+.total-cart {
+  padding: 10px;
+  background-color: #4d4d8f;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.total-cart:hover {
+  background-color: rgb(49, 49, 107);
+}
+
+.do {
+  /* content: "; */
+  height: 20px;
+  width: 20px;
+  margin-top: -40px;
+  position: absolute;
+
+  border-radius: 50%;
+  margin-left: 185px;
+  z-index: 2;
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+  background-color: #b8ffa8;
+}
+/*****************************************/
+.logo-box {
+  grid-column: 2;
+}
+
+.web-logo {
+  height: 70px;
+}
+
+.search-box {
+  grid-column: 3;
+  /* background-color: #ccc; */
+  background-color: #eee;
+  width: 81%;
+  border-radius: 23px;
+
+  margin: 0px 48px;
+}
+
+.search {
+  padding: 10px;
+  background-color: #eee;
+  /* width: 70%; */
+  border: none;
+  font-size: 18px;
+  border-radius: 23px;
+}
+
+.btn {
+  padding: 12px;
+  background-color: rgb(77, 77, 143);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* .btn {
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    color: #333;
+  } */
+
+.btn:hover {
+  background-color: rgb(49, 49, 107);
+}
+
+/* .btn:hover {
+    background-color: #999;
+    color: #333;
+  } */
+.icon {
+  font-size: 14px;
+}
+
+.horizontal {
+  border-top: 1px solid #ddd;
+}
+
+/*
+  navigation section
+  
+  */
+
+.nav {
+  height: 50px;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.navigation {
+  display: flex;
+  padding: 15px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.nav-li {
+  margin-right: 48px;
+  list-style: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #aaa;
+}
+
+/*
+ section design
+*/
+section {
+  padding: 24px 16px;
+  margin-bottom: 48px;
+}
+
+.head {
+  text-align: center;
+  color: rgb(36, 123, 194);
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.contact-box {
+  text-align: center;
+}
+.guide-box {
+  padding: 10px 10px 24px 10px;
+  letter-spacing: 1.1;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.guide {
+  color: #3583e3;
+}
+
+.guide_name {
+  color: #024ba5;
+}
+
+.img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.name {
+  display: flex;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 21px;
+}
+.enroll,
+.number,
+.email {
+  display: flex;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.large {
+  margin-left: 24px;
+  margin-right: 12px;
+}
+
+.contain {
+  margin-left: 24px;
+  margin-right: 18px;
+}
+
+/*
+ footer design
+*/
+
+.footer {
+  padding: 96px;
+  background-color: #eee;
+}
+
+.footer--section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 96px;
+  /* align-items: center; */
+}
+
+.footer--logo {
+  text-align: center;
+}
+
+.footer--img {
+  /* padding-top: -0.5rem; */
+  height: 96px;
+  margin-bottom: 12px;
+}
+
+.social--link {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.social--link a:link,
+.social--link a:visited {
+  /* color: #555; */
+  color: #74c0fc;
+}
+
+.social--link a:hover,
+.social--link a:active {
+  color: #1971c2;
+}
+
+.copyright {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.8;
+}
+
+.footer--heading {
+  font: size 20px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: #555;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 16px;
+  color: #777;
+  line-height: 1.2;
+}
+
+.address {
+  margin-bottom: 16px;
+}
+
+.list--style {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer--link:link,
+.footer--link:visited {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: #777;
+}
+
+.footer--link:hover,
+.footer--link:active {
+  color: #555;
+}
+
+*:focus {
+  outline: none;
+}
