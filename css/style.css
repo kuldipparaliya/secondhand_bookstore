@@ -44,7 +44,7 @@ html {
   color: black;
   cursor: pointer;
   animation-name: demo;
-  animation-duration: 8s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -90,16 +90,16 @@ html {
   grid-column: 3;
   /* background-color: #ccc; */
   background-color: #eee;
-  width: 81%;
+  width: 85%;
   border-radius: 23px;
-
-  margin: 0px 48px;
 }
 
 .search {
   padding: 10px;
   background-color: #eee;
   /* width: 70%; */
+  font-weight: bold;
+  color: #666;
   border: none;
   font-size: 18px;
   border-radius: 23px;
@@ -108,7 +108,7 @@ html {
 .btn {
   padding: 12px;
   background-color: rgb(77, 77, 143);
-  border-radius: 20px;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
 }

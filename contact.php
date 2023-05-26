@@ -23,11 +23,11 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="container">
         <div class="logo-box">
-          <a href="">
+          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
             <img
               class="web-logo"
               src="images/website-logo.png"
@@ -36,8 +36,8 @@
           </a>
         </div>
         <div class="search-box">
-          <input class="search" type="text" placeholder="search" />
-          <button class="btn">
+          <input class="search" id="search" type="text" placeholder="search" />
+          <button class="btn" id="button">
             <ion-icon class="icon" name="search-outline"></ion-icon>
           </button>
         </div>
@@ -49,7 +49,7 @@
       <ul class="navigation">
         <li class="nav-li"><a class="nav-link" href="index.php">HOME</a></li>
         <?php
-
+         /* If  username is set then display profile link */
         if(isset($_SESSION['username'])){
           echo '<li class="nav-li"><a class="nav-link" href="profile.php?uid='.$_SESSION['user_id'].'">PROFILE</a></li>';
         }
@@ -60,10 +60,11 @@
         </li>
 
         <?php
-          
+          /* If username is set then display logout link with username*/
           if(isset($_SESSION['username'])){
             echo '<li class="nav-li"><a class="nav-link" href="logout.php">Hello '.$_SESSION['username'].', LOGOUT</a></li>';
           }else{
+             /* If username is not set then dispaly login link */
             echo '<li class="nav-li"><a class="nav-link" href="login.php">LOGIN</a></li>';
           }
         ?>
@@ -76,7 +77,7 @@
       </div>
       <div class="guide-box">
         <h4 class="guide">
-          Project-Guide:<span class="guide_name">Shraddha Mam</span>
+          Project-Guide:<span class="guide_name">Prof.Shraddha Ma'm</span>
         </h4>
       </div>
       <?php
@@ -117,7 +118,7 @@
       <div class="footer--section">
         <div class="col--logo">
           <div class="footer--logo">
-            <a href="#"
+            <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
               ><img
                 class="footer--img"
                 src="images/website-logo.png"
@@ -127,12 +128,8 @@
           <div class="social--links">
             <ul class="social--link">
               <li>
-                <a href="#"
-                  ><ion-icon
-                    name="logo-instagram"
-                    class="footer--icon"
-                  ></ion-icon
-                ></a>
+                <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
+                  ><ion-icon name="logo-github"></ion-icon></a>
               </li>
               <li>
                 <a href="#"
@@ -182,5 +179,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/general.js"></script>
   </body>
 </html>

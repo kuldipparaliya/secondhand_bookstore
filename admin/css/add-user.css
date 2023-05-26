@@ -190,10 +190,11 @@ input {
   margin-bottom: 16px;
 }
 
-.danger {
-  background-color: rgb(206, 111, 111);
-  text-align: center;
+.error {
+  font-weight: 700;
+  background-color: #f96868;
   padding: 10px;
+  color: #444;
 }
 /*   footer  design       
         ***************************** 

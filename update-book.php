@@ -27,7 +27,7 @@
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
   </head>
-  <body>
+  <body id="body">
     <header class="header">
    
       <div class="container">
@@ -47,7 +47,7 @@
         }
         ?>
         <div class="logo-box">
-          <a href="">
+          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
             <img
               class="web-logo"
               src="images/website-logo.png"
@@ -56,8 +56,8 @@
           </a>
         </div>
         <div class="search-box">
-          <input class="search" type="text" placeholder="search" />
-          <button class="btn">
+          <input class="search" id="search" type="text" placeholder="search" />
+          <button class="btn" id="button">
             <ion-icon class="icon" name="search-outline"></ion-icon>
           </button>
         </div>
@@ -193,5 +193,7 @@
         <a class="wp-link" href="">WP team</a>
       </p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/general.js"></script>
   </body>
 </html>

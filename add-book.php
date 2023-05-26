@@ -1,6 +1,7 @@
 <?php
   include "config.php";
   session_start();
+  /*If username is not set then redirect tpo the login page */
   if(!isset($_SESSION['user_id'])){
     header("location: {$hostname}/login.php");
   }
@@ -27,16 +28,21 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="container">
         <?php
+       
         if(isset($_SESSION['user_id'])){
+           /* If  username and session cart variable is not set then set zero to the cart heading */
           if(!isset($_SESSION['cart'])){
             $count = 0;
           }else{
+            /* If  username and session cart variable is set then set length to the cart heading */
             $count = count($_SESSION['cart']);
           }
+
+          /* If username is not set then not display cart section */
           echo'<div class="cart-box">
           <a href="cart.php" class="total-cart"
             ><ion-icon name="cart-outline"></ion-icon
@@ -47,7 +53,7 @@
         ?>
         
         <div class="logo-box">
-          <a href="">
+          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
             <img
               class="web-logo"
               src="images/website-logo.png"
@@ -56,8 +62,8 @@
           </a>
         </div>
         <div class="search-box">
-          <input class="search" type="text" placeholder="search" />
-          <button class="btn">
+          <input class="search" id="search" type="text" placeholder="search" />
+          <button class="btn" id="button">
             <ion-icon class="icon" name="search-outline"></ion-icon>
           </button>
         </div>
@@ -68,9 +74,11 @@
     <nav class="nav">
       <ul class="navigation">
         <?php
+        /* If  username is set then display profile link */
         if(isset($_SESSION['user_id'])){
           echo ' <li class="nav-li"><a class="nav-link" href="profile.php?uid='.$_SESSION['user_id'].'">PROFILE</a></li>';
         }else{
+          /* If username is not set then display Home link*/
           echo '<li class="nav-li"><a class="nav-link" href="">HOME</a></li>';
         }
         ?>       
@@ -79,10 +87,11 @@
         <!-- <li class="nav-li"><a class="nav-link" href="category.php">CATEGORY</a></li> -->
         <li class="nav-li"><a class="nav-link" href="contact.php">CONTACT</a></li>
         <?php
-          
+          /* If username is set then display logout link with username*/
           if(isset($_SESSION['username'])){
             echo '<li class="nav-li"><a class="nav-link" href="logout.php">Hello '.$_SESSION['username'].', LOGOUT</a></li>';
           }else{
+            /* If username is not set then dispaly login link */
             echo '<li class="nav-li"><a class="nav-link" href="login.php">LOGIN</a></li>';
           }
         ?>
@@ -165,6 +174,7 @@
         <a class="wp-link" href="">WP team</a>
       </p>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/general.js"></script>
   </body>
 </html>

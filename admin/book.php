@@ -40,7 +40,7 @@ if($_SESSION['role'] == 0){
       <div class="container">
         
         <div class="logo-box">
-          <a href="">
+          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
             <img
               class="web-logo"
               src="css/website-logo.png"
@@ -89,7 +89,7 @@ if($_SESSION['role'] == 0){
           <tr>
             <th>S.NO.</th>
             <th>BOOK TITLE</th>
-            <th>AUTHOR</th>
+            <th>BOOK OWNER</th>
             <th>CATEGORY</th>
             <th>DATE</th>
             <th>OLD PRIZE</th>

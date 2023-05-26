@@ -1,13 +1,17 @@
-<?php include "header.php";
-if($_SESSION['role']==0){
-  header("location: ../index.php");
-}
-?>
 <?php
+  session_start();
+  include "config.php";
+  if(!isset($_SESSION['username'])){
+    header("Location: ../index.php");
+  } 
+  if($_SESSION['role']==0){
+    header("location: ../index.php");
+  }
+?>
+ <?php
   if(isset($_POST['save'])){
 
-
-    include "config.php";
+    $new_name = "user.jpg";
 
     $fname = mysqli_real_escape_string($conn,$_POST['fname']);
     $lname = mysqli_real_escape_string($conn,$_POST['lname']);
@@ -22,17 +26,16 @@ if($_SESSION['role']==0){
 
     $result = mysqli_query($conn,$sql) or die("Query failed!!");
 
-    if(mysqli_num_rows($result)>0){
-      echo "<p class='danger'>Username is already exists!!</p>";
-    }else{
-      $sql1 = "insert into user(first_name,last_name,username,password,role,gmail,contact) values('{$fname}','{$lname}','{$uname}','{$password}','{$role}','{$email}','{$contact}')";
+    if(mysqli_num_rows($result)==0){
+      $sql1 = "insert into user(first_name,last_name,username,password,role,user_image,gmail,contact) values('{$fname}','{$lname}','{$uname}','{$password}','{$role}','{$new_name}','{$email}','{$contact}')";
 
-      if(mysqli_query($conn,$sql1)){
-        header("Location: {$hostname}/user.php");
-      }
+      $result1 = mysqli_query($conn,$sql1);
+      
+      header("location: http://localhost/second-hand-book/admin/user.php");
+    }else{
+      echo "<p class='error'>Username is already exists!!</p>";
     }
   }
-
 ?>
 
 <html lang="en">
@@ -41,7 +44,7 @@ if($_SESSION['role']==0){
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADD-User-page</title>
-    <link rel="stylesheet" href="css/update-user.css" />
+    <link rel="stylesheet" href="css/add-user.css" />
 
     <script
       type="module"
@@ -62,7 +65,7 @@ if($_SESSION['role']==0){
       <div class="container">
         
         <div class="logo-box">
-          <a href="">
+          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
             <img
               class="web-logo"
               src="css/website-logo.png"
@@ -163,12 +166,13 @@ if($_SESSION['role']==0){
                   required
                 />
               </div>
-              
+
               <div class="book-save">
                 <input type="submit" class="save" value="ADD" name="save" />
               </div>
             </div>
           </form>
+         
         </div>
       </div>
     </section>

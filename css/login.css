@@ -84,3 +84,9 @@ input {
   font-weight: 700;
   margin-left: 16px;
 }
+
+.span {
+  color: red;
+  margin-left: 12px;
+  font-weight: bold;
+}

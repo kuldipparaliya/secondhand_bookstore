@@ -24,11 +24,11 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="container">
         <div class="logo-box">
-          <a href="">
+          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
             <img
               class="web-logo"
               src="images/website-logo.png"
@@ -37,8 +37,8 @@
           </a>
         </div>
         <div class="search-box">
-          <input class="search" type="text" placeholder="search" />
-          <button class="btn">
+          <input class="search" id="search" type="text" placeholder="search" />
+          <button class="btn" id="button">
             <ion-icon class="icon" name="search-outline"></ion-icon>
           </button>
         </div>
@@ -69,6 +69,7 @@
           </h1>
         </div>
         <?php
+         /* If session cart variable is set then print table for print book data */
           if(isset($_SESSION['cart'])){
         ?>
         <div>
@@ -87,6 +88,7 @@
             <?php
             $i=0;
             $total = 0;
+             /* loop through the array every time we will get the particular book */
             foreach($_SESSION['cart'] as $key => $value){
               $total += $value['prize'];
               $i++;
@@ -103,6 +105,7 @@
               <td><?php echo $value['old_prize']; ?>&#8377;</td>
               <td><?php echo $value['prize']; ?>&#8377;</td>
               <td>
+         
                 <form action="save_cart.php" method="post">
                   <input type="hidden" name="book_id" value=<?php echo $value['book_id'];?>>
                   <button class="delete-icon" name="remove"><ion-icon name="close-circle-outline"></ion-icon
@@ -125,7 +128,9 @@
 
         </div>
         <?php
-          }else{
+          }else{ 
+            /* If session cart variable is not set then print error message*/
+
             echo "<div style='color:red;padding:10px;background-color:#990000;font-weight:bold;'>Cart is empty!!</div>";
           }
         ?>
@@ -137,5 +142,7 @@
         <a class="wp-link" href="">WP team</a>
       </p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/general.js"></script>
   </body>
 </html>

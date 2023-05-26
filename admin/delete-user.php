@@ -15,7 +15,9 @@
     $sql4 = "select * from user where user_id = {$user_id}";
     $result4 = mysqli_query($conn,$sql4) or die("Query Failed!!!");
     while($row4 = mysqli_fetch_assoc($result4)){
-        unlink("upload/".$row4["user_image"]);
+        if($row4['user_image'] != "user.jpg"){
+            unlink("upload/".$row4["user_image"]);
+        }
     }
 
     $sql1 = "delete from book where book_author = {$user_id}";

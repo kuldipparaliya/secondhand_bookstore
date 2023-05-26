@@ -23,16 +23,20 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="container">
+       
         <?php
+         /* If username is set then check cart variable is set or not */
         if(isset($_SESSION['user_id'])){
+          /* If cart set then set the length */
           if(!isset($_SESSION['cart'])){
             $count = 0;
           }else{
             $count = count($_SESSION['cart']);
           }
+          /* If username is not set then cart section is not display */
           echo'<div class="cart-box">
           <a href="cart.php" class="total-cart"
             ><ion-icon  name="cart-outline"></ion-icon
@@ -43,7 +47,7 @@
         ?>
         
         <div class="logo-box">
-          <a href="">
+          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
             <img
               class="web-logo"
               src="images/website-logo.png"
@@ -52,8 +56,9 @@
           </a>
         </div>
         <div class="search-box">
-          <input class="search" type="text" placeholder="search" />
-          <button class="btn">
+          <input class="search" id="search" type="text" placeholder="search" />
+
+          <button class="btn" id="button">
             <ion-icon class="icon" name="search-outline"></ion-icon>
           </button>
         </div>
@@ -63,11 +68,19 @@
 
     <nav class="nav">
       <ul class="navigation">
+
+      <?php
+      /*If username set and role is admin then display ADMIN PANEL */
+        if(isset($_SESSION['user_id']) && $_SESSION['role'] == 1){
+          echo ' <li class="nav-li"><a class="nav-link" href="admin/index.php">ADMIN PANEL</a></li>';
+        }
+        ?>  
         <?php
+        /* If username set then display Profile otherwise display Home link */
         if(isset($_SESSION['user_id'])){
           echo ' <li class="nav-li"><a class="nav-link" href="profile.php?uid='.$_SESSION['user_id'].'">PROFILE</a></li>';
         }else{
-          echo '<li class="nav-li"><a class="nav-link" href="">HOME</a></li>';
+          echo '<li class="nav-li"><a class="nav-link" href="index.php">HOME</a></li>';
         }
         ?>       
         <li class="nav-li"><a class="nav-link" href="book.php">BOOKS</a></li>
@@ -76,6 +89,7 @@
         <li class="nav-li"><a class="nav-link" href="contact.php">CONTACT</a></li>
         <?php
           
+          /* If username is set then display logout link with username otherwise display login link */ 
           if(isset($_SESSION['username'])){
             echo '<li class="nav-li"><a class="nav-link" href="logout.php">Hello '.$_SESSION['username'].', LOGOUT</a></li>';
           }else{
@@ -103,7 +117,7 @@
       <!-- </div> -->
       <div class="guide-box">
         <h4 class="guide">
-          Project-Guide:<span class="name">Shradhdha Mam</span>
+          Project-Guide:<span class="name">Prof. Shraddha Ma'm</span>
         </h4>
       </div>
     </section>
@@ -148,15 +162,18 @@
 
       <div class="book-container">
       <?php
+      /*Display latest 3 book added */
           include "config.php";
           $record = 3;
           $offset = 0;
           if(isset($_SESSION['user_id'])){
+            /* If username is set then display only book which username is not equal with book_author*/
             $sql = "select * from book
             left join user on book.book_author = user.user_id 
             where book.book_author != {$_SESSION['user_id']}
             order by book_id desc limit {$offset},{$record}";
           }else{
+            /*If username is not set then display latest 3 book  */
             $sql = "select * from book
             left join user on book.book_author = user.user_id 
             order by book_id desc limit {$offset},{$record}";
@@ -210,7 +227,7 @@
       <div class="footer--section">
         <div class="col--logo">
           <div class="footer--logo">
-            <a href="#"
+            <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
               ><img
                 class="footer--img"
                 src="images/website-logo.png"
@@ -220,12 +237,8 @@
           <div class="social--links">
             <ul class="social--link">
               <li>
-                <a href="#"
-                  ><ion-icon
-                    name="logo-instagram"
-                    class="footer--icon"
-                  ></ion-icon
-                ></a>
+                <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
+                  ><ion-icon name="logo-github"></ion-icon></a>
               </li>
               <li>
                 <a href="#"
@@ -275,5 +288,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/general.js"></script>
   </body>
 </html>
