@@ -117,7 +117,7 @@
       <!-- </div> -->
       <div class="guide-box">
         <h4 class="guide">
-          Project-Guide:<span class="name">Prof. Shraddha Ma'm</span>
+          <span class="name">Prof. Shraddha Ma'm</span>
         </h4>
       </div>
     </section>
@@ -256,7 +256,7 @@
             </ul>
           </div>
           <p class="copyright">
-            copyright &copy; 2023 by WP TEAM inc. All rights reserved.
+            Copyright &copy; 2023 by kuldip inc. All rights reserved.
           </p>
         </div>
         <div class="contact me">
@@ -267,7 +267,7 @@
               <a href="tel:111-222-3333" class="footer--link">931-311-8046</a
               ><br />
               <a href="mailto:me@exapmle.com" class="footer--link"
-                >wpteam2K23@gmail.com</a
+                >kuldipparaliya6987@gmail.com</a
               >
             </p>
           </address>

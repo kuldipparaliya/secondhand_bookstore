@@ -15,7 +15,10 @@
     <title>Login-page</title>
     <!-- <link rel="stylesheet" href="update-user.css" /> -->
     <link rel="stylesheet" href="css/index.css">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"

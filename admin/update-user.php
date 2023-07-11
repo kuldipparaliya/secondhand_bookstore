@@ -29,7 +29,10 @@ if($_SESSION['role']==0){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Update-User-page</title>
     <link rel="stylesheet" href="css/update-user.css" />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -153,7 +156,7 @@ if($_SESSION['role']==0){
                 </select>
               </div>
               <div class="user-contact">
-                <label for="contact">contact NO.</label>
+                <label for="contact">Contact NO.</label>
                 <input
                   type="tel"
                   id="contact"
@@ -200,7 +203,7 @@ if($_SESSION['role']==0){
     <footer class="footer">
       <p>
         &#169; Copyright 2024 second hand book | Powered by
-        <a class="wp-link" href="">WP team</a>
+        <a class="wp-link" href="">Kuldip Paraliya</a>
       </p>
     </footer>
   </body>

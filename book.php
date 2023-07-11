@@ -193,7 +193,7 @@ if(!isset($_SESSION['user_id'])){
             <td><img class="book-img" src="admin/upload/<?php echo $row1['book_image'] ?>" alt="book image" /></td>
             <td><?php echo $row1['book_title'] ?></td>
             <td><a href="profile.php?uid=<?php echo $row1['user_id'] ?>"><?php echo $row1['username'] ?></a></td>
-            <td><a href="category.php?cid=<?php echo $row1['category_id']; ?>"><?php echo $row1['category_name'] ?></a></td>
+            <td><a class="category-link" href="category.php?cid=<?php echo $row1['category_id']; ?>"><?php echo $row1['category_name'] ?></a></td>
            
             <td><?php echo $row1['date'] ?></td>
             <td><?php echo $row1['old_prize'] ?></td>
@@ -271,7 +271,7 @@ if(!isset($_SESSION['user_id'])){
     <footer class="footer">
       <p>
         &#169; Copyright 2023 second hand book | Powered by
-        <a class="wp-link" href="">WP team</a>
+        <a class="wp-link" href="">Kuldip Paraliya</a>
       </p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

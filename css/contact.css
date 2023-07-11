@@ -170,7 +170,6 @@ html {
  section design
 */
 section {
-  padding: 24px 16px;
   margin-bottom: 48px;
 }
 
@@ -210,15 +209,12 @@ section {
 }
 
 .name {
-  display: flex;
   margin-bottom: 12px;
   color: #555;
   font-size: 21px;
 }
-.enroll,
-.number,
+
 .email {
-  display: flex;
   margin-bottom: 8px;
   color: #444;
 }
@@ -233,6 +229,173 @@ section {
   margin-right: 18px;
 }
 
+/************************
+
+  cta section
+
+************************/
+
+.section--cta {
+  padding: 32px 48px;
+}
+
+.cta {
+  margin-bottom: 48px;
+}
+
+.cta--header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.cta--heading {
+  font-size: 36px;
+  color: #1c7ed6;
+  letter-spacing: 1.05;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cta--description {
+  font-size: 20px;
+  color: #3599fecc;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.cta--content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 96px;
+  padding: 24px;
+  text-align: center;
+  justify-content: center;
+}
+
+.info {
+  color: #1c7ed6;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+  padding: 12px;
+  transition: all 0.3s;
+}
+
+.info:hover {
+  color: #555;
+  transform: translateY(-1.2px);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.06);
+}
+.cta--icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.cta--title {
+  font-weight: 700;
+  letter-spacing: 1.05;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.cta--value {
+  line-height: 1.8;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cta--form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 96px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #1c7ed6;
+  /* background-color: #74c0fc; */
+}
+
+.form--text--box {
+  padding: 48px;
+}
+
+.form--header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.form--title {
+  font-size: 44px;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.form--description {
+  color: #555;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.form--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.form--grid label {
+  font-size: 24px;
+  color: #555;
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.form--grid input {
+  padding: 12px;
+  width: 100%;
+  background-color: #e7f5ff;
+  font-size: 16px;
+  border-radius: 11px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form--grid ::placeholder {
+  font-weight: 700;
+  color: #aaa;
+}
+
+.submit {
+  align-self: end;
+  font-size: 16px;
+  color: #aaa;
+  background-color: #e7f5ff;
+  border-radius: 11px;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.submit:hover {
+  background-color: #1864ab;
+  color: #fff;
+}
+
+.person {
+  height: 100%;
+}
+
+.form-img-box {
+  text-align: right;
+}
+
+.form--img {
+  background-size: cover;
+  background-position: center;
+  height: 440px;
+  width: 400px;
+}
 /*
  footer design
 */

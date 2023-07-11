@@ -139,7 +139,7 @@
     <footer class="footer">
       <p>
         &#169; Copyright 2023 second hand book | Powered by
-        <a class="wp-link" href="">WP team</a>
+        <a class="wp-link" href="">Kuldip Paraliya</a>
       </p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

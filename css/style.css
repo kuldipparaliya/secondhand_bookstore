@@ -257,6 +257,7 @@ container section
 
 .name {
   color: #024ba5;
+  opacity: 0;
 }
 
 /*

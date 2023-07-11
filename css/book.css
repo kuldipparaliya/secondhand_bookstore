@@ -185,6 +185,10 @@ design section
   margin-bottom: 24px;
 }
 
+.category-link {
+  font-size: 14px;
+}
+
 .book-img {
   height: 100px;
   width: 130px;

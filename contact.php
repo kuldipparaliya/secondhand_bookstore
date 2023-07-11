@@ -2,7 +2,6 @@
   session_start();
   include "config.php";
 ?>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,7 +26,9 @@
     <header class="header">
       <div class="container">
         <div class="logo-box">
-          <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master">
+          <a
+            href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
+          >
             <img
               class="web-logo"
               src="images/website-logo.png"
@@ -58,7 +59,6 @@
         <li class="nav-li">
           <a class="nav-link" href="category_list.php">CATEGORY</a>
         </li>
-
         <?php
           /* If username is set then display logout link with username*/
           if(isset($_SESSION['username'])){
@@ -71,54 +71,91 @@
       </ul>
     </nav>
     <hr class="horizontal" />
-    <section>
-      <div class="head">
-        <h2>MEET OUR TEAM</h2>
-      </div>
-      <div class="guide-box">
-        <h4 class="guide">
-          Project-Guide:<span class="guide_name">Prof.Shraddha Ma'm</span>
-        </h4>
-      </div>
-      <?php
-      $sql = "select * from team";
-      $result = mysqli_query($conn,$sql);
-      if(mysqli_num_rows($result)>0){
-        while($row = mysqli_fetch_assoc($result)){
-          
-      ?>
+    <section id="contact" class="section--cta">
+      <div class="cta">
+        <div class="cta--header">
+          <p class="cta--heading">Contact</p>
+          <p class="cta--description">
+            I am every day here for you. Contact me and stay in touch.
+          </p>
+        </div>
 
-      <div class="section-container">
-        <div class="contact-box">
-          <img class="img" src="admin/upload/<?php echo $row['member_img'] ?>" alt="" />
-          <h2 class="name">
-            <ion-icon class="large" name="people-outline"></ion-icon><?php echo $row['member_name'] ?>
-          </h2>
-          <div class="enroll">
-            <ion-icon class="contain" name="earth-outline"></ion-icon>
-            <span><?php echo $row['enroll'] ?></span>
+        <div class="cta--content">
+          <div class="info">
+            <ion-icon name="location-outline" class="cta--icon"></ion-icon>
+            <p class="cta--title">Address</p>
+            <p class="cta--value">LDCE hostel navarangpura,380015 Ahmedabad</p>
           </div>
-          <div class="number">
-            <ion-icon class="contain" name="call-outline"></ion-icon>
-            <span>+91 <?php echo $row['contact'] ?></span>
+          <div class="info">
+            <ion-icon name="call-outline" class="cta--icon"></ion-icon>
+            <p class="cta--title">Phone</p>
+            <p class="cta--value">+931-311-8046</p>
           </div>
-          <div class="email">
-            <ion-icon class="contain" name="mail-outline"></ion-icon>
-            <span><?php echo $row['email'] ?></span>
+          <div class="info">
+            <ion-icon name="mail-outline" class="cta--icon"></ion-icon>
+            <p class="cta--title">Email</p>
+            <p class="cta--value">kuldipparaliya6987@gmail.com</p>
           </div>
         </div>
-        <?php
-          }
-        }
-        ?>
+      </div>
+
+      <div class="cta--form">
+        <div class="form--text--box">
+          <div class="form--header">
+            <p class="form--title">Contact form</p>
+            <p class="form--description">You can contact me by filling form.</p>
+          </div>
+
+          <form class="form--grid" name="sign-up" netlify>
+            <div class="name">
+              <label for="name"> Full name </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="paraliya kuldip"
+                required
+              />
+            </div>
+            <div class="email">
+              <label for="email"> Email </label>
+              <input
+                name="email"
+                id="email"
+                type="email"
+                title="Please enter valid email address"
+                placeholder="kuldipparaliya6987@gmail.com"
+                required
+              />
+            </div>
+            <div class="phone">
+              <label for="phone"> Phone </label>
+              <input
+                name="name"
+                id="phone"
+                type="tel"
+                placeholder="+931-311-8046"
+                title="Please enter valid contact number"
+                required
+              />
+            </div>
+            <button class="submit" id="submit">submit</button>
+          </form>
+        </div>
+        <div class="form-img-box" role="img" aria-label="person image">
+          <img class="form--img" src="person.jpg" alt="" />
+        </div>
+        <!-- <div class="form--img--box">
+            <img class="hero--img person" src="person.jpg" alt="person image" />
+          </div> -->
       </div>
     </section>
-
     <footer class="footer">
       <div class="footer--section">
         <div class="col--logo">
           <div class="footer--logo">
-            <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
+            <a
+              href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
               ><img
                 class="footer--img"
                 src="images/website-logo.png"
@@ -128,8 +165,10 @@
           <div class="social--links">
             <ul class="social--link">
               <li>
-                <a href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
-                  ><ion-icon name="logo-github"></ion-icon></a>
+                <a
+                  href="https://github.com/kuldipparaliya/secondhand_bookstore/tree/master"
+                  ><ion-icon name="logo-github"></ion-icon
+                ></a>
               </li>
               <li>
                 <a href="#"
@@ -147,7 +186,7 @@
             </ul>
           </div>
           <p class="copyright">
-            copyright &copy; 2023 by WP TEAM inc. All rights reserved.
+            Copyright &copy; 2023 by Kuldip inc. All rights reserved.
           </p>
         </div>
         <div class="contact me">
@@ -158,7 +197,7 @@
               <a href="tel:111-222-3333" class="footer--link">931-311-8046</a
               ><br />
               <a href="mailto:me@exapmle.com" class="footer--link"
-                >wpteam2K23@gmail.com</a
+                >kuldipparaliya6987@gmail.com</a
               >
             </p>
           </address>

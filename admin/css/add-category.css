@@ -124,6 +124,10 @@ navigation section
   ***************************** 
   */
 
+section {
+  margin-bottom: 110px;
+}
+
 .section-container {
   margin: 24px;
 }
